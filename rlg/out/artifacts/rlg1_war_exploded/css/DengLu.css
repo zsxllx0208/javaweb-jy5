@@ -1,0 +1,32 @@
+body{
+    background-color: white;
+}
+#bg{
+    margin: auto;
+}
+#wz{
+    position: absolute;
+    left: 45%;
+    margin: auto;
+    font-size:50px;
+}
+#bg_1{
+    padding-top: 100px;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+ }
+#tp {
+    height: 100%;
+    width: 100%;
+}
+
+#bg_2{
+    /*top: 240px;*/
+    /*position: absolute;*/
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+}
