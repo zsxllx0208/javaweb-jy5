@@ -1,10 +1,7 @@
 package com.itdr.zsx.dao;
 
-
-import com.itdr.zsx.pojo.OrderItemVoLists;
-import com.itdr.zsx.pojo.Orders;
+import com.itdr.zsx.pojo.Order;
 import com.itdr.zsx.utils.PoolUtil;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -13,33 +10,48 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class OrderDao {
-    public List<Orders> selectAll(String pageNum, String pageSize) {
-        //获取连接池
-        ComboPooledDataSource c = PoolUtil.getcom();
-        //JDBC处理SQL语句的类
-        QueryRunner qr = new QueryRunner(c);
-        //创建Sql语句
-        String sql = "select * from orders";
-        //创建订单集合存储
-        List<Orders> li = null;
+    //根据订单编号查订单
+    public Order selectByNo(String orderNo) {
+        Long oNo = Long.parseLong(orderNo);
+        QueryRunner qr = new QueryRunner(PoolUtil.getcom());
+        String sql = "select * from orders where orderNo = ? ";
+        Order o = new Order();
         try {
-            li = qr.query(sql,new BeanListHandler<Orders>(Orders.class));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return li;
-    }
-
-    public OrderItemVoLists selectOne(String oid) {
-        ComboPooledDataSource c = PoolUtil.getcom();
-        QueryRunner rq = new QueryRunner(c);
-        String sql = "select * from orderitemvolist where orderNo =? ";
-        OrderItemVoLists o = null;
-        try {
-            o = rq.query(sql, new BeanHandler<OrderItemVoLists>(OrderItemVoLists.class),oid);
+            o = qr.query(sql,new BeanHandler<Order>(Order.class),oNo);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return o;
+    }
+        //发送货物
+    public int sendGoods(String orderNo) {
+        Long oNo = Long.parseLong(orderNo);
+        QueryRunner qr = new QueryRunner(PoolUtil.getcom());
+        String sql = "update  orders set statusDesc = '已支付',paymentTime = current_timestamp,sendTime= current_timestamp where orderNo = ?";
+        int row = 0;
+        try {
+            row = qr.update(sql,oNo);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return row;
+    }
+    //获取订单列表
+    public List<Order> selectALL(String pageSize, String pageNum) {
+        Integer ps = Integer.parseInt(pageSize);
+        Integer pn = Integer.parseInt(pageNum);
+
+        QueryRunner qr = new QueryRunner(PoolUtil.getcom());
+        String sql = "select * from orders limit ? , ?";
+        List<Order> li = null;
+        try {
+            li = qr.query(sql, new BeanListHandler<Order>(Order.class), pn, ps);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return li;
     }
 }

@@ -41,14 +41,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/rlg1/web/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\IdeaProjects\javaweb-jy5\rlg\rlg1\web\WEB-INF" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.itdr.zsx.dao" />
+      <recent name="com.itdr.zsx.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\IdeaProjects\javaweb-jy5\rlg\rlg1\web" />
@@ -57,9 +59,8 @@
       <recent name="C:\Users\Administrator\IdeaProjects\javaweb-jy5\rlg\rlg1\src\com\itdr\zsx\service" />
       <recent name="C:\Users\Administrator\IdeaProjects\javaweb-jy5\rlg\rlg1\src\com\itdr\zsx\dao" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.itdr.zsx.dao" />
-      <recent name="com.itdr.zsx.service" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\IdeaProjects\javaweb-jy5\rlg\rlg1\web\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -81,6 +82,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestDemo.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlg1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itdr.zsx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itdr.zsx" />
+      <option name="MAIN_CLASS_NAME" value="com.itdr.zsx.TestDemo" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestDemo.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rlg1" />
       <extension name="coverage">
@@ -92,6 +110,23 @@
       <option name="PACKAGE_NAME" value="com.itdr.zsx" />
       <option name="MAIN_CLASS_NAME" value="com.itdr.zsx.TestDemo" />
       <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestDemo.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rlg1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itdr.zsx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itdr.zsx" />
+      <option name="MAIN_CLASS_NAME" value="com.itdr.zsx.TestDemo" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -118,6 +153,7 @@
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8088/" />
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="rlg1:war exploded">
@@ -193,10 +229,14 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.TestDemo.test1" />
+      <item itemvalue="JUnit.TestDemo.test" />
+      <item itemvalue="JUnit.TestDemo.test2" />
       <item itemvalue="Tomcat Server.Tomcat 8.0.52" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestDemo.test2" />
+        <item itemvalue="JUnit.TestDemo.test" />
         <item itemvalue="JUnit.TestDemo.test1" />
       </list>
     </recent_temporary>
@@ -227,41 +267,19 @@
       <workItem from="1565568935626" duration="3285000" />
       <workItem from="1565576657433" duration="1361000" />
       <workItem from="1565581972375" duration="3217000" />
-      <workItem from="1565591957092" duration="5517000" />
+      <workItem from="1565591957092" duration="11263000" />
+      <workItem from="1565655957487" duration="511000" />
+      <workItem from="1565693877200" duration="7219000" />
+      <workItem from="1565741434933" duration="1294000" />
+      <workItem from="1565777551818" duration="7765000" />
+      <workItem from="1565828244326" duration="3152000" />
+      <workItem from="1565849356779" duration="7937000" />
+      <workItem from="1565914583262" duration="15569000" />
+      <workItem from="1566004897891" duration="3747000" />
+      <workItem from="1566105872523" duration="9854000" />
+      <workItem from="1566174208690" duration="4392000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="TestDemo_test1 - 2019.08.05 at 20h 10m 55s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.05 at 20h 12m 12s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.05 at 20h 14m 27s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.05 at 20h 15m 14s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.06 at 14h 19m 11s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.06 at 14h 19m 23s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.06 at 18h 13m 22s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.06 at 18h 14m 09s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.06 at 18h 14m 28s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestDemo_test1 - 2019.08.06 at 19h 08m 06s.xml">
-      <configuration name="TestDemo.test1" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -283,39 +301,127 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/UserService.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="23" />
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/ProductService.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/UserDao.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/UserDao.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="25" />
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/controller/UsersController.java</url>
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/controller/ProductController.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/OrderService.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/OrderService.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/OrderService.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/OrderService.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/OrderService.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/service/OrderService.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/OrderDao.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/OrderDao.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/OrderDao.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/OrderDao.java</url>
           <line>28</line>
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/controller/UsersController.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="29" />
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/OrderDao.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/controller/UsersController.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/OrderDao.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/controller/UsersController.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="37" />
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/OrderDao.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/rlg1/src/com/itdr/zsx/dao/ProductDao.java</url>
+          <line>48</line>
+          <properties class="com.itdr.zsx.dao.ProductDao" method="selectById">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

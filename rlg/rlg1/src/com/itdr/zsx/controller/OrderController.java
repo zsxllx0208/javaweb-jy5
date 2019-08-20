@@ -2,7 +2,6 @@ package com.itdr.zsx.controller;
 
 import com.itdr.zsx.common.ResponseCode;
 import com.itdr.zsx.service.OrderService;
-import com.itdr.zsx.utils.JsonUtils;
 import com.itdr.zsx.utils.PathUtil;
 
 import javax.servlet.ServletException;
@@ -12,57 +11,90 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(value = "/manage/order/*")
+@WebServlet(name = "OrderController", value = "/manage/order/*")
 public class OrderController extends HttpServlet {
-    OrderService os = new OrderService();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request,response);
+        doGet(request, response);
     }
+
+    OrderService os = new OrderService();
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //创建统一返回对象
+        ResponseCode rs = new ResponseCode();
 
         //获取路径
-        String pathuir = request.getRequestURI();
-        String path = PathUtil.getPath(pathuir);
-
-        //创建统一返回值
-        ResponseCode rs= null;
-        //判断请求
-        switch (path){
+        String pathInfo = request.getPathInfo();
+        String path = PathUtil.getPath(pathInfo);
+        switch (path) {
+            case "send_goods":
+                rs = sendgoodsDo(request);
+                break;
             case "list":
-                rs =listDo(request,response);
-            break;
-            case "xq":
-                xqDo(request,response);
+                rs =listDo(request);
+                break;
+            case "search":
+                rs =searchDo(request);
+                break;
+            case "detail":
+                rs =detailDo(request);
                 break;
         }
-        response.setContentType("text/json;charset=utf-8");
-        response.getWriter().write(JsonUtils.obj2String(rs));
+
+        response.getWriter().write(rs.toString());
     }
 
 
 
-    private ResponseCode listDo(HttpServletRequest request, HttpServletResponse response) {
-        //创建统一返回对象和参数
+
+    //订单发货
+    private ResponseCode sendgoodsDo(HttpServletRequest request) {
         ResponseCode rs = new ResponseCode();
 
-        String pageSize = request.getParameter("paseSize");
+        String orderNo = request.getParameter("orderNo");
+
+        rs = os.selectByNo(orderNo);
+
+        return rs;
+    }
+
+    //订单列表
+    private ResponseCode listDo(HttpServletRequest request) {
+        ResponseCode rs =new ResponseCode();
+
+        //获取参数
+        String pageSize = request.getParameter("pageSize");
         String pageNum = request.getParameter("pageNum");
-        //调用业务层查询全部方法
-        rs = os.selectAll(pageNum,pageSize);
+
+        rs = os.selectAll(pageSize,pageNum);
+
         return rs;
-
-
-
     }
-    private ResponseCode xqDo(HttpServletRequest request, HttpServletResponse response) {
-        //创建统一返回对象和参数
+
+    //按ID查询订单
+    private ResponseCode searchDo(HttpServletRequest request) {
+
         ResponseCode rs = new ResponseCode();
 
-        String oid = request.getParameter("oid");
-        //调用业务层查询一个商品方法
-        rs = os.selectOne(oid);
+        //获取参数
+
+        String orderNo = request.getParameter("orderNo");
+
+        rs = os.selectOne(orderNo);
+
         return rs;
+    }
 
 
+    private ResponseCode detailDo(HttpServletRequest request) {
+        ResponseCode rs = new ResponseCode();
+
+        //获取参数
+
+        String orderNo = request.getParameter("orderNo");
+
+        rs = os.selectOne(orderNo);
+
+        return rs;
     }
 }

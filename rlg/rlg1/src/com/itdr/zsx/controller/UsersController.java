@@ -38,8 +38,12 @@ public class UsersController extends HttpServlet {
                 break;
             case "login":
                 rs = loginDo(request);
+                break;
             case "disableuser":
                 rs = disableuserDo(request);
+                break;
+            case "managelist":
+                rs = manageListDo(request);
                 break;
 
         }
@@ -67,7 +71,7 @@ public class UsersController extends HttpServlet {
             return rs;
         }
         //判断是否是管理员
-        if (user.getType() != 1) {
+        if (user.getType() < 1) {
             rs.setStatus(3);
             rs.setMsg("没有操作权限");
             return rs;
@@ -78,6 +82,7 @@ public class UsersController extends HttpServlet {
         String pageSize = request.getParameter("pageSize");
         String pageNum = request.getParameter("pageNum");
 
+        rs = uc.selectAll(pageSize, pageNum);
         //调用业务层方法处理业务
 
         return rs;
@@ -93,9 +98,9 @@ public class UsersController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
+        //调用业务层方法处理业务
         ResponseCode rs = uc.selectOne(username, password);
 
-        //调用业务层方法处理业务
 
         HttpSession session = request.getSession();
         session.setAttribute("user", rs.getData());
@@ -115,5 +120,36 @@ public class UsersController extends HttpServlet {
 
     }
 
+    //获取管理员列表
+    private ResponseCode manageListDo(HttpServletRequest request) {
 
+        ResponseCode rs = new ResponseCode();
+        //获取一个session对象
+        HttpSession session = request.getSession();
+        Users user = (Users) session.getAttribute("user");
+        //判断是否已登录
+        if (user == null) {
+            rs.setStatus(3);
+            rs.setMsg("请登录后操作");
+            return rs;
+        }
+        //判断是否是管理员
+        if (user.getType() < 2) {
+            rs.setStatus(3);
+            rs.setMsg("没有操作权限");
+            return rs;
+        }
+
+        //获取参数
+
+        String pageSize = request.getParameter("pageSize");
+        String pageNum = request.getParameter("pageNum");
+
+        rs = uc.selectManages(pageSize, pageNum);
+        //调用业务层方法处理业务
+
+        return rs;
+
+
+    }
 }

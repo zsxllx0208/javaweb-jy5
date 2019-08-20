@@ -30,7 +30,7 @@ public class MessyCodeFilter implements Filter {
         //获取路径
         String pathInfo = request.getPathInfo();
 
-        if (pathInfo == "/login.do") {
+        if (pathInfo.equals("/login.do") ) {
             chain.doFilter(req,resp);
             return;
         }
@@ -44,7 +44,7 @@ public class MessyCodeFilter implements Filter {
             resp.getWriter().write(rs.toString());
             return;
         }
-        if (user.getType() != 1) {
+        if (user.getType() < 1) {
             rs.setStatus(3);
             rs.setMsg("没有操作权限！");
             resp.getWriter().write(rs.toString());
